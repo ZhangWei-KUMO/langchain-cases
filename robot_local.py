@@ -6,7 +6,7 @@ from langchain import OpenAI,VectorDBQA
 from langchain.document_loaders import DirectoryLoader
 from langchain.chains import RetrievalQA
 import os
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = "KEY"
 loader = DirectoryLoader('/Users/lewiszhang/Desktop/', glob='**/*.pdf')
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=100, chunk_overlap=0)

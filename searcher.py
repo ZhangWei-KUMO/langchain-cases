@@ -1,6 +1,6 @@
 import os
-os.environ["OPENAI_API_KEY"] = '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'
-os.environ["SERPAPI_API_KEY"] = 'cc3833fd7b252842c5f3501b32a7d2ee1213a8dfb2621356e99fbbffa052f4f8'
+# os.environ["OPENAI_API_KEY"] = 
+# os.environ["SERPAPI_API_KEY"] = 
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.llms import OpenAI

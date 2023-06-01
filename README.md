@@ -11,3 +11,12 @@
 
 
 加载[nltk](https://github.com/nltk/nltk_data/tree/gh-pages), 在报错提示的文件夹中创建nltk_data文件夹，下载文件中tokenizers和taggers文件架里的文件全部解压放入nltk_data文件夹。
+
+# 注意
+在处理epub格式的文件时需要本机安装pandoc，以下是不同系统安装pandoc的方法
+```bash
+# mac
+brew install pandoc
+# windows
+choco install pandoc
+```

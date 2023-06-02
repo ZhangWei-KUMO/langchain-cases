@@ -18,6 +18,6 @@ qa = RetrievalQA.from_chain_type(llm=OpenAI(model_name='text-davinci-003',
                                             openai_api_key=OPENAI_API_KEY,
                                             max_tokens=1000,temperature=0), 
                                  chain_type="stuff", retriever=retriever)
-query = "可以跟我说一说如何实现中华民族伟大复兴吗？写一篇1000字的文章"
+query = "跟我介绍下这本书,写一篇1000字的概要"
 result = qa.run(query)
 print(result)

@@ -8,7 +8,8 @@ from langchain import OpenAI
 import pyttsx3
 import pinecone
 import os
-engine = pyttsx3.init('dummy')
+engine = pyttsx3.init()
+voices = engine.getProperty('voices')
 
 load_dotenv('.env')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')

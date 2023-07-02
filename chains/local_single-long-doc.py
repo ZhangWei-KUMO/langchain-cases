@@ -10,9 +10,9 @@ os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 embeddings = OpenAIEmbeddings()
 docsearch = Chroma(persist_directory="./data", embedding_function=embeddings)
-query = "你是一名券商研究员，帮我解读一下这份研报"
+query = "我是一个电商从业人员，能给我点建议吗？"
 docs = docsearch.similarity_search(query, include_metadata=True)
-llm = ChatOpenAI(temperature=0.2,model_name="gpt-3.5-turbo-16k-0613")
-chain = load_qa_chain(llm, chain_type="map_reduce", verbose=True)
+llm = ChatOpenAI(temperature=0.1,model_name="gpt-3.5-turbo-16k-0613")
+chain = load_qa_chain(llm, chain_type="stuff", verbose=True)
 res = chain.run(input_documents=docs, question=query)
 print(res)

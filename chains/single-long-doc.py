@@ -8,7 +8,7 @@ load_dotenv('.env')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
-loader = PyPDFLoader('./2022Q4es.pdf')
+loader = PyPDFLoader('./media.pdf')
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=1600, chunk_overlap=200)
